@@ -34,7 +34,7 @@ def main(argv):
             if not os.path.exists(directory):
                 os.makedirs(directory)
             retf = cv2.imwrite(directory + "\\" + f + ".jpg", feed, [1, 100])
-            print("Retval: ", retf)
+            print("Captured: ", retf)
             i += 1
 
     cv2.destroyAllWindows()
