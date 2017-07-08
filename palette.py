@@ -15,13 +15,14 @@ while True:
     cv2.imshow('Palette', background)
     if cv2.waitKey(1) == 27:
         break
-    r = cv2.getTrackbarPos('R', 'Palette')
-    g = cv2.getTrackbarPos('G', 'Palette')
-    b = cv2.getTrackbarPos('B', 'Palette')
+    pr = cv2.getTrackbarPos('R', 'Palette')
+    pg = cv2.getTrackbarPos('G', 'Palette')
+    pb = cv2.getTrackbarPos('B', 'Palette')
     # cv2.circle(background, (160, 120), 50, (0, 0, 255), 1)
     # cv2.setTrackbarPos('R', 'Palette', fun[0])
     # cv2.setTrackbarPos('G', 'Palette', fun[1])
     # cv2.setTrackbarPos('B', 'Palette', fun[2])
-    background[:] = [b, g, r]
+    cv2.circle(background, (120, 160), 50, (pb, pg, pr), -1)
+    # background[:] = [b, g, r]
 cv2.destroyAllWindows()
 
